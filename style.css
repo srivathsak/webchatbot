@@ -39,34 +39,12 @@ img{
   color: #004085;
   line-height: 3.2;
 }
-.active h6{
-  font-size: 10px;
-  margin-left: 10px;
-  line-height: 2px;
-  color: #fff;
-}
-.header-icons{
- width: 120px;
- float: right;
- margin-top: 12px;
- margin-right: 10px;
-}
-.header-icons .fa{
-  color: #fff;
-  cursor: pointer;
-  margin: 10px;
-}
-.chat-page{
-  padding: 0 0 0 0;
-}
+
 .msg-inbox{
   overflow: hidden;
   padding-bottom: 0px;
   background: #f8f9fa;
   height: 476px;
-}
-.chats{
-  padding: 0px 0px 0 0px;
 }
 .msg-page{
   height: 476px;
@@ -81,11 +59,7 @@ img{
   border-radius: 5px;
   background: rgba(0,0,0,.1);
 }
-.received-chats-img{
-  display: inline-block;
-  width: 20px;
-  float: left;
-}
+
 .received-chats{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -108,12 +82,7 @@ img{
   padding: 5px 10px 5px 12px;
   width: 82%
 }
-.time{
-  color: #777;
-  display: block;
-  font-size: 12px;
-  margin: 8px 0 0;
-}
+
 .outgoing-chats{
   overflow: hidden;
   margin: 26px 20px;
@@ -132,11 +101,6 @@ img{
   width: 36%;
   margin-left: 62%;
 }
-.outgoing-chats-img{
-  display: inline-block;
-  width: 20px;
-  float: right;
-}
 .msg-bottom{
   position: relative;
   background-color: #f9d162;
@@ -144,179 +108,43 @@ img{
   border-bottom-left-radius: 20px;
   height: 80px;
 }
-.input-group{
-  float: right;
-  margin-top: 13px;
-  margin-right: 20px;
-  outline: none !important;
-  border-radius: 20px;
-  width: 61% !important;
-  background-color: #fff;
+
+
+.inputbox{
+  float: left;
+  padding-left:40px;
+  padding-top:10px;
+
 }
-.form-control{
-  border: none !important;
-  border-radius: 20px !important;
-}
-.input-group-text{
-  background: transparent !important;
-    border: none !important;
-}
-.input-group .fa{
-  color: #007bff;
-  float: right;
-}
-.form-control:focus{
-  border-color: none !important;
-  box-shadow: none !important;
-  border-radius: 20px;
+.sendbtn{
+  float:right;
+  padding-top:10px;
+  padding-right:40px;
 }
 
-/*received-msg {
-  flex: 1 1 auto;
-  color: rgba(255, 255, 255, 0.78);
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+
+/* Style the input field */
+.inputbox input {
+  width: 260px;
+  flex: 1; /* Take up available space */
+  padding: 10px;
+  border: 2px solid #0074d9; /* Colorful border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
-.received-msg .messages-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 101%;
-  width: 100%;
-}
-.received-msg .message {
-  clear: both;
-  float: left;
-  padding: 6px 10px 7px;
-  border-radius: 10px 10px 10px 0;
-  background: rgba(0, 0, 0, 0.3);
-  margin: 8px 0;
-  font-size: 11px;
-  line-height: 1.4;
-  margin-left: 35px;
-  position: relative;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-.received-msg .message .timestamp {
-  position: absolute;
-  bottom: -15px;
-  font-size: 9px;
-  color: rgba(255, 255, 255, 0.3);
-}
-.received-msg .message::before {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  border-top: 6px solid rgba(0, 0, 0, 0.3);
-  left: 0;
-  border-right: 7px solid transparent;
-}
-.received-msg .message .avatar {
-  position: absolute;
-  z-index: 1;
-  bottom: -15px;
-  left: -35px;
-  border-radius: 30px;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: 2px solid rgba(255, 255, 255, 0.24);
-}
-.received-msg .message .avatar img {
-  width: 100%;
-  height: auto;
-}
-.received-msg .message.message-personal {
-  float: right;
+
+/* Style the send button */
+.sendbtn button {
+  background-color: #0074d9;
   color: #fff;
-  text-align: right;
-  background: linear-gradient(120deg, #248A52, #257287);
-  border-radius: 10px 10px 0 10px;
-}
-.received-msg .message.message-personal::before {
-  left: auto;
-  right: 0;
-  border-right: none;
-  border-left: 5px solid transparent;
-  border-top: 4px solid #257287;
-  bottom: -4px;
-}
-.received-msg .message:last-child {
-  margin-bottom: 30px;
-}
-.received-msg .message.new {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-animation: bounce 500ms linear both;
-          animation: bounce 500ms linear both;
-}
-.received-msg .message.loading::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  content: '';
-  display: block;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  z-index: 2;
-  margin-top: 4px;
-  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
-          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  padding: 10px 20px;
   border: none;
-  -webkit-animation-delay: .15s;
-          animation-delay: .15s;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-.received-msg .message.loading span {
-  display: block;
-  font-size: 0;
-  width: 20px;
-  height: 10px;
-  position: relative;
+
+.sendbtn button:hover {
+  background-color: #0056a7; /* Darker color on hover */
 }
-.received-msg .message.loading span::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  content: '';
-  display: block;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  z-index: 2;
-  margin-top: 4px;
-  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
-          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
-  margin-left: -7px;
-}
-.received-msg .message.loading span::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  content: '';
-  display: block;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  z-index: 2;
-  margin-top: 4px;
-  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
-          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
-  margin-left: 7px;
-  -webkit-animation-delay: .3s;
-          animation-delay: .3s;
-}*/
