@@ -62,6 +62,8 @@ function apiresponse(message) {
             console.error("Error: " + error);
             var element = document.getElementById("container");
             element.appendChild(addBotText(error));
+            scrolldown();
+
      });
 }
 
